@@ -1,0 +1,21 @@
+//Buttons:
+.btn {
+	@include bg-colors($colors);
+}
+
+[class^="btn--"] {
+	@extend %center-align;
+  @extend %btn;
+  margin-bottom: em(22px, 14px);
+	&:first-of-type {
+		margin-top: em(25px, 14px);
+	}
+  @include media-q(small) {
+  	width: 100%;
+  }
+  @include media-q(medium) {
+    width: auto;
+    display: inline-block;
+    @include doubly(20px);
+  }
+}

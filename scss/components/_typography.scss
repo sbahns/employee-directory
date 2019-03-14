@@ -1,0 +1,25 @@
+//Typography:
+.container {
+	font-family: $font-body;
+	color: color(primary);
+	font-size: $base__font-size;
+	line-height: ($base__line/$base__font-size);
+	font-weight: 300;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: em(20px);
+}
+
+h3 {
+	font-size: em(16px);
+	text-transform: uppercase;
+	margin-top: 0;
+	font-weight: normal;
+}
