@@ -11,18 +11,16 @@ main {
 			  border: solid 2px #f0dce5;
 			  padding: 20px;
 			  margin-bottom: 24px;
-			   img {
-					border-radius: 4px;
-					margin-bottom: 2.25rem;
-					cursor: pointer;
-					@media (max-width: 720px) {
-						width: 100%;
-					}
-				}
+
 			  p {
 				font-size: 1.8rem;
 				margin-bottom: 1rem;
 				}
+			  .reveal-on-modal {
+				  display: none;
+			  }
+
+
 			}
 		}
 	}

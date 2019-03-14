@@ -460,16 +460,11 @@ main .grid .cell .card {
   border: solid 2px #f0dce5;
   padding: 20px;
   margin-bottom: 24px; }
-  main .grid .cell .card img {
-    border-radius: 4px;
-    margin-bottom: 2.25rem;
-    cursor: pointer; }
-    @media (max-width: 720px) {
-      main .grid .cell .card img {
-        width: 100%; } }
   main .grid .cell .card p {
     font-size: 1.8rem;
     margin-bottom: 1rem; }
+  main .grid .cell .card .reveal-on-modal {
+    display: none; }
 
 /*--------------------------------------------------
 :: Typography styles
@@ -505,6 +500,11 @@ img {
   width: 100%;
   height: auto;
   display: block; }
+
+.card .avatar img {
+  border-radius: 50%;
+  cursor: pointer;
+  max-width: 128px; }
 
 /*--------------------------------------------------
 :: Button styles

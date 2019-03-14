@@ -16,7 +16,7 @@ function loopEmployees(x) {
 			<div class="card">
 				<div class="user">
 					<div class="avatar">
-						<img src='${x.picture.thumbnail}' />
+						<img src='${x.picture.medium}' />
 					</div>
 					<div class='user-info'>
 						<div class="name">${x.name.first} ${x.name.last}</div>

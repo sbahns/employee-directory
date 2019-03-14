@@ -5,10 +5,12 @@ img {
 	height: auto;
 	display: block;
 }
-header{
+.card{
 	.avatar {
 		img {
-
-		}
+			 border-radius: 50%;
+			 cursor: pointer;
+			 max-width: 128px;
+		 }
 	}
 }
