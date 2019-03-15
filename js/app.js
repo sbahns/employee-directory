@@ -21,7 +21,7 @@ function loopEmployees(x) {
 					<div class='user-info'>
 						<div class="name">${x.name.first} ${x.name.last}</div>
 						<div class="email">
-							<a href="#">${x.email}</a>
+							${x.email}
 						</div>
 						<div class="city">
 							${x.location.city}

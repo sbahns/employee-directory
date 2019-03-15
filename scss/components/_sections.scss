@@ -7,14 +7,18 @@ main {
 			.card {
 			  text-align: center;
 			  border-radius: 6px;
-			  background-color: #fff;
-			  border: solid 2px #f0dce5;
+			  background-color: $white;
+			  border: solid 2px $grey;
 			  padding: 20px;
 			  margin-bottom: 24px;
-
-			  p {
-				font-size: 1.8rem;
-				margin-bottom: 1rem;
+				width: 100%;
+				.user {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+					.avatar {
+					}
 				}
 			  .reveal-on-modal {
 				  display: none;
@@ -24,4 +28,32 @@ main {
 			}
 		}
 	}
+}
+
+@media (min-width: 768px) {
+	main {
+		.grid {
+			.cell{
+				.card {
+					.user {
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-start;
+						.avatar {
+							width: 40%;
+						}
+						.user-info {
+							text-align: left;
+							width: 60%;
+							margin-left: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+
 }
