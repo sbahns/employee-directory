@@ -23,7 +23,12 @@ main {
 			  .reveal-on-modal {
 				  display: none;
 			  }
-
+				&:hover {
+					border: solid 2px $blue;
+					box-shadow: 1px 1px 5px $blue;
+					transition: all 1s;
+					cursor: pointer;
+				}
 
 			}
 		}

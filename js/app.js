@@ -1,5 +1,5 @@
 const grid = document.querySelector('.grid');
-const url = 'https://randomuser.me/api/?results=12'; // Get 12 random users
+const url = 'https://randomuser.me/api/?results=12&nat=us'; // Get 12 random users
 
 function createNode(element) {
   return document.createElement(element); // Create the type of element you pass in the parameters

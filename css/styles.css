@@ -485,6 +485,11 @@ main .grid .cell .card {
     align-items: center; }
   main .grid .cell .card .reveal-on-modal {
     display: none; }
+  main .grid .cell .card:hover {
+    border: solid 2px #3fabca;
+    box-shadow: 1px 1px 5px #3fabca;
+    transition: all 1s;
+    cursor: pointer; }
 
 @media (min-width: 768px) {
   main .grid .cell .card .user {
