@@ -404,9 +404,6 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  background-color: #fcfcfc; }
-
 a {
   font-weight: 300;
   text-decoration: none; }
@@ -473,104 +470,16 @@ main {
 main .grid .cell .card {
   text-align: center;
   border-radius: 6px;
-  background-color: #ffffff;
-  border: solid 2px #cccccc;
+  background-color: #fff;
+  border: solid 2px #f0dce5;
   padding: 20px;
-  margin-bottom: 24px;
-  width: 100%; }
-  main .grid .cell .card .user {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
+  margin-bottom: 24px; }
+  main .grid .cell .card p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem; }
   main .grid .cell .card .reveal-on-modal {
     display: none; }
-  main .grid .cell .card:hover {
-    border: solid 2px #3fabca;
-    box-shadow: 1px 1px 5px #3fabca;
-    transition: all 1s;
-    cursor: pointer; }
-  main .grid .cell .card.modal-active {
-    z-index: 100001;
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    animation-name: animate-alert;
-    animation-duration: 5s; }
-    main .grid .cell .card.modal-active .reveal-on-modal {
-      z-index: 1000;
-      display: block; }
 
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 990; }
-
-.modal .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 995;
-  background: rgba(0, 0, 0, 0.85); }
-
-.modal .modal_content {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: 90%;
-  overflow: auto;
-  background: #fff;
-  box-sizing: border-box;
-  padding: 20px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
-  width: 520px;
-  /* This just a default width */ }
-
-.modal .modal_content > h2 {
-  font-size: 28px;
-  font-weight: 200;
-  margin: 20px 0 40px;
-  text-align: center; }
-
-.modal .modal_content .buttons_wrapper {
-  padding: 20px; }
-
-.modal .close_modal {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  opacity: 0.5;
-  background: none;
-  border: none;
-  transition: opacity 0.2s ease; }
-
-.modal .close_modal:hover {
-  opacity: 0.9; }
-
-@media (min-width: 768px) {
-  main .grid .cell .card .user {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; }
-    main .grid .cell .card .user .avatar {
-      width: 40%; }
-    main .grid .cell .card .user .user-info {
-      text-align: left;
-      width: 60%;
-      margin-left: 20px; } }
 /*--------------------------------------------------
 :: Typography styles
 -------------------------------------------------- */
@@ -583,32 +492,17 @@ main .grid .cell .card {
 
 h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 24px;
   font-weight: 300; }
 
 h2 {
   font-size: 1.25em; }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 1em;
   text-transform: uppercase;
   margin-top: 0;
   font-weight: normal; }
-
-.user-info {
-  word-break: break-word; }
-  .user-info .name {
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 1.25em;
-    line-height: 1.4; }
-  .user-info .email {
-    font-size: 0.9375em;
-    line-height: 1.4; }
-  .user-info .city {
-    text-transform: capitalize;
-    font-size: 0.9375em;
-    line-height: 1.4; }
 
 /*--------------------------------------------------
 :: Navigation styles
