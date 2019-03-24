@@ -11,13 +11,8 @@
 // Buttons
 
 %btn {
-  width: 100%;
-  padding: 10px 45px;
   border: 0;
   border-radius: 5px;
-  color: $white;
-  text-transform: uppercase;
-	background-color: $lavender;
 }
 
 // Center alignment
@@ -29,54 +24,4 @@
 .centered {
 	float: none  !important;
 	margin: 0 auto;
-}
-
-%bubble {
-		color: $charcoal;
-		position: relative;
-		background: $off-white;
-		border: 2px solid $grey;
-		border-radius: 3px;
-
-		&:after, &:before {
-			bottom: 100%;
-			left: 50%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			//pointer-events: none;
-
-			@media (min-width: 768px){
-				left: 100%;
-			}
-		}
-
-		&:after {
-			border-color: rgba(251, 251, 251, 0);
-			border-bottom-color: $off-white;
-			border-width: 7px;
-			margin-left: -30px;
-		}
-		&:before {
-			border-color: rgba(204, 204, 204, 0);
-			border-bottom-color: $grey;
-			border-width: 10px;
-			margin-left: -33px;
-		}
-}
-
-//Icons
-
-%ico-arrow {
-  border: solid $charcoal;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 5px;
-
-	&.right {
-	  transform: rotate(-45deg);
-	  -webkit-transform: rotate(-45deg);
-	}
 }
