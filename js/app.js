@@ -4,7 +4,7 @@ const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
 const modal_content = document.querySelector('.modal_content');
 
-const json = 'https://randomuser.me/api/?results=12&nat=us&seed=srbweb'; // Get 12 random users
+const json = 'https://randomuser.me/api/?results=12&nat=us'; // Get 12 random users
 
 let employee = [];
 let selectedProfile = 0;
@@ -39,7 +39,7 @@ fetchData(json)
 	              selectedProfile = i;
 	              document.querySelector('.modal_content').innerHTML = employeeModal(employee, i);
 
-	          	}
+							}
 							toggleModal();
 	          });
 
