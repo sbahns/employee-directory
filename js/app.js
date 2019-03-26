@@ -27,15 +27,17 @@ function fetchData(url) {
 }
 
 fetchData(json)
-  .then(getEmployees)
-	.then(function() {
+  .then(getEmployees);
+
+fetchData(json)
+	.then(function(data) {
+				employee = data.results;
 	      let cell = document.querySelectorAll('.cell');
-	        for (let i=0; i < cell.length; i++) {
+	        for (let i=0; i<cell.length; i++) {
 	        cell[i].addEventListener('click', () => {
 	          if (modal.className=='modal') {
 	              selectedProfile = i;
-	              document.querySelector('.modal_content').innerHTML =
-								employeeModal(employee, i);
+	              document.querySelector('.modal_content').innerHTML = employeeModal(employee, i);
 
 							}
 							toggleModal();
