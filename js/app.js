@@ -27,24 +27,21 @@ function fetchData(url) {
 }
 
 fetchData(json)
-  .then(getEmployees);
-
-fetchData(json)
-	.then(function(data) {
-				employee = data.results;
+  .then(getEmployees)
+  .then(function(data) {
+		employee = data.results;
 	      let cell = document.querySelectorAll('.cell');
 	        for (let i=0; i<cell.length; i++) {
 	        cell[i].addEventListener('click', () => {
 	          if (modal.className=='modal') {
 	              selectedProfile = i;
 	              document.querySelector('.modal_content').innerHTML = employeeModal(employee, i);
-
-							}
-							toggleModal();
+			  }
+				toggleModal();
 	          });
 
 	        }
-			});
+	});
 
 // ------------------------------------------
 //  HELPER FUNCTIONS
@@ -61,7 +58,7 @@ function employeeModal(array, index) {
 				    <span class="prev"> < </span>
 				    <span class="next"> > </span>
 				</div>
-				<div class="card" data-id="${array[index]}">
+				<div class="card" data-id="${index}">
 					<div class="user">
 						<div class="avatar">
 							<img src='${array[index].picture.medium}' />
@@ -120,6 +117,7 @@ function getEmployees(data) {
 		 cell.innerHTML = html;
 		 append(grid, cell);
 	});
+	return data;
 }
 
 
