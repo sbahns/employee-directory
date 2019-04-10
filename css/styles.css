@@ -498,30 +498,38 @@ main .grid .cell .card {
     width: 100%;
     height: 100%;
     z-index: 995;
-    background: rgba(0, 0, 0, 0.85); }
+    background: rgba(0, 0, 0, 0.55); }
   .modal .modal_content {
     z-index: 999;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: 90%;
     overflow: auto;
-    background: #fff;
+    background: #ffffff;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px 10px 35px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
-    border-radius: 4px;
-    width: 520px;
+    border-radius: 7px;
+    border: 2px solid #cccccc;
+    width: 450px;
     /* This just a default width */ }
-  .modal .modal_content > h2 {
-    font-size: 28px;
-    font-weight: 200;
-    margin: 20px 0 40px;
-    text-align: center; }
-    .modal .modal_content > h2 .buttons_wrapper {
-      padding: 20px; }
+    .modal .modal_content .card {
+      text-align: center; }
+      .modal .modal_content .card .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+        .modal .modal_content .card .user .reveal-on-modal {
+          border-top: 1px solid #cccccc;
+          margin-top: 30px;
+          padding-top: 25px; }
+          .modal .modal_content .card .user .reveal-on-modal .phone, .modal .modal_content .card .user .reveal-on-modal .address, .modal .modal_content .card .user .reveal-on-modal .birthdate {
+            padding: .35em 0; }
   .modal .close_modal {
+    color: #404a51;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -550,39 +558,33 @@ main .grid .cell .card {
 -------------------------------------------------- */
 .container {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  color: #808080;
+  color: #888e92;
   font-size: 16px;
   line-height: 1.75;
   font-weight: 300; }
 
 h1 {
+  color: #404a51;
   margin: 0;
   font-size: 1.5em;
   font-weight: 300; }
 
 h2 {
+  color: #404a51;
+  margin: 0;
   font-size: 1.25em; }
 
-h3 {
-  font-size: 1.125em;
-  text-transform: uppercase;
-  margin-top: 0;
-  font-weight: normal; }
+p {
+  margin: 0; }
 
 .user-info {
   word-break: break-word; }
   .user-info .name {
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 1.25em;
-    line-height: 1.4; }
-  .user-info .email {
-    font-size: 0.9375em;
-    line-height: 1.4; }
+    text-transform: capitalize; }
   .user-info .city {
-    text-transform: capitalize;
-    font-size: 0.9375em;
-    line-height: 1.4; }
+    text-transform: capitalize; }
+  .user-info .address {
+    text-transform: capitalize; }
 
 /*--------------------------------------------------
 :: Navigation styles
@@ -595,10 +597,16 @@ img {
   height: auto;
   display: block; }
 
-.card .avatar img {
+.cell .card .avatar img {
   border-radius: 50%;
   cursor: pointer;
   max-width: 128px; }
+
+.modal_content .card .avatar img {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 170px;
+  margin: 20px auto; }
 
 /*--------------------------------------------------
 :: Button styles

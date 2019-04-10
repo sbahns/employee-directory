@@ -8,38 +8,34 @@
 }
 
 h1 {
-  margin: 0;
-  font-size: em(24px);
+	color: color(secondary);
+  	margin: 0;
+  	font-size: em(24px);
 	font-weight: 300;
 }
 
 h2 {
+	color: color(secondary);
+	margin: 0;
 	font-size: em(20px);
 }
 
-h3 {
-	font-size: em(18px);
-	text-transform: uppercase;
-	margin-top: 0;
-	font-weight: normal;
+p {
+	margin: 0;
 }
-
 
 .user-info {
 	word-break: break-word;
 	.name {
 		text-transform: capitalize;
-		font-weight: bold;
-		font-size: em(20px);
-		line-height: 1.4;
 	}
 	.email {
-		font-size: em(15px);
-		line-height: 1.4;
+
 	}
 	.city {
 		text-transform: capitalize;
-		font-size: em(15px);
-		line-height: 1.4;
+	}
+	.address {
+		text-transform: capitalize;
 	}
 }

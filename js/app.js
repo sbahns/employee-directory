@@ -4,6 +4,11 @@ const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
 const modal_content = document.querySelector('.modal_content');
 
+// function formatDate(setTime) {
+// 	var str = setTime;
+// 	var res = str.slice(0, 9);
+// }
+
 const json = 'https://randomuser.me/api/?results=12&nat=us'; // Get 12 random users
 
 let employee = [];
@@ -36,11 +41,10 @@ fetchData(json)
 	          if (modal.className=='modal') {
 	              selectedProfile = i;
 	              document.querySelector('.modal_content').innerHTML = employeeModal(employee, i);
-			  }
-				toggleModal();
-	          });
-
-	        }
+  	  		  }
+			  toggleModal();
+	       });
+	    }
 	});
 
 // ------------------------------------------
@@ -49,46 +53,50 @@ fetchData(json)
 
 
 function employeeModal(array, index) {
-	return `
-				<button title="Close" class="close_modal">
-					X
-				</button>
 
-				<div>
-				    <span class="prev"> < </span>
-				    <span class="next"> > </span>
+	console.log(array[index].dob.date);
+
+	let birthdate = array[index].dob.date;
+
+	let str = birthdate;
+	let res = str.substring(5, 7)+ '/' +str.substring(8, 10)+ '/' + str.substring(0, 4);
+
+	return `
+		<button title="Close" class="close_modal">
+			X
+		</button>
+		<div class="card" data-id="${index}">
+			<div class="user">
+				<div class="avatar">
+					<img src='${array[index].picture.medium}' />
 				</div>
-				<div class="card" data-id="${index}">
-					<div class="user">
-						<div class="avatar">
-							<img src='${array[index].picture.medium}' />
-						</div>
-						<div class='user-info'>
-							<div class="name">${array[index].name.first} ${array[index].name.last}</div>
-							<div class="email">
-								${array[index].email}
-							</div>
-							<div class="city">
-								${array[index].location.city}
-							</div>
-							<div class="reveal-on-modal">
-								<div class="phone">
-									${array[index].cell}
-								</div>
-								<div class="address">
-									${array[index].location.street}
-									${array[index].location.city}, ${array[index].location.state} ${array[index].location.postcode}
-								</div>
-								<div class="birthdate">
-									${array[index].dob.date}
-								</div>
-							</div>
-						</div>
+				<div class='user-info'>
+					<div class="name">
+						<h2>${array[index].name.first} ${array[index].name.last}</h2>
+					</div>
+					<div class="email">
+						<p>${array[index].email}</p>
+					</div>
+					<div class="city">
+						<p>${array[index].location.city}</p>
 					</div>
 
-			</div>`;
-
+					<div class="reveal-on-modal">
+						<div class="phone">
+							<p>${array[index].cell}</p>
+						</div>
+						<div class="address">
+							<p>${array[index].location.street}, ${array[index].location.city}, ${array[index].location.state} ${array[index].location.postcode}</p>
+						</div>
+						<div class="birthdate">
+							<p>Birthday: ${res}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>`;
 }
+
 
 function getEmployees(data) {
 	let employees = data.results;
@@ -102,12 +110,14 @@ function getEmployees(data) {
 							<img src='${employee.picture.medium}' />
 						</div>
 						<div class='user-info'>
-							<div class="name">${employee.name.first} ${employee.name.last}</div>
+							<div class="name">
+							 <h2>${employee.name.first} ${employee.name.last}</h2>
+							</div>
 							<div class="email">
-								${employee.email}
+								<p>${employee.email}</p>
 							</div>
 							<div class="city">
-								${employee.location.city}
+								<p>${employee.location.city}</p>
 							</div>
 						</div>
 					</div>

@@ -5,12 +5,28 @@ img {
 	height: auto;
 	display: block;
 }
-.card{
-	.avatar {
-		img {
-			 border-radius: 50%;
-			 cursor: pointer;
-			 max-width: 128px;
-		 }
+
+.cell {
+	.card {
+		.avatar {
+			img {
+				 border-radius: 50%;
+				 cursor: pointer;
+				 max-width: 128px;
+			 }
+		}
+	}
+}
+
+.modal_content {
+	.card {
+		.avatar {
+			img {
+				 border-radius: 50%;
+				 cursor: pointer;
+				 width: 170px;
+				 margin: 20px auto;
+			 }
+		}
 	}
 }
